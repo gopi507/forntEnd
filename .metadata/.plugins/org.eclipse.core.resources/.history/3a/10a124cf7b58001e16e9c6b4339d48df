@@ -1,0 +1,27 @@
+package com.example.survey.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.survey.model.SurveyData;
+import com.example.survey.service.SurveyService;
+
+import java.util.List;
+
+@RestController
+
+//@CrossOrigin(origins = "http://localhost:3000")
+
+public class SurveyController {
+
+    @Autowired
+    SurveyService surveyService;
+
+    @PostMapping("/addSurveyData")
+    public SurveyData addSurveyData(@RequestBody SurveyData surveyData) {
+        return surveyService.addBenchDataForm(surveyData);
+    }
+
+}
+

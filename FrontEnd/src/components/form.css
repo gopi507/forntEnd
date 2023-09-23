@@ -1,0 +1,124 @@
+@media only screen and (max-width: 800px) {
+
+
+    .mainForm {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 -150px 0 -150px;
+    }
+}
+
+.form {
+    background-image: url("./background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.mainForm {
+    text-align: left;
+    width: 65%;
+    margin: auto;
+    display: grid;
+}
+
+.head {
+    background-color: #03787c;
+    color: white;
+    padding: 50px;
+    padding-top: 100px;
+}
+
+.text-format-content {
+    font-size: 2.00rem;
+}
+
+.text-format-content p {
+    font-size: 0.75rem;
+}
+
+.parra {
+    text-align: left;
+    font-weight: bold;
+}
+
+.ele {
+    background-color: #e3e8eca9;
+    padding: 20px;
+    padding-right: 50px;
+}
+
+ol {
+    margin-bottom: 50px;
+}
+
+input[type=text],
+[type=email] {
+    width: 100%;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 25px;
+}
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+input[type=text]:focus {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    height: 25px;
+}
+
+textarea {
+    width: 100% !important;
+    height: 25px !important;
+    border: none;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.radio,
+.radio1 {
+    display: flex;
+    margin-left: 0px;
+    margin: 20px;
+}
+
+.ans {
+    height: 125px !important;
+}
+
+button {
+    left: 30px;
+    position: relative;
+    display: inline-flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border: 0.125rem solid transparent;
+    vertical-align: middle;
+    margin: 0px;
+    cursor: pointer;
+    text-decoration-line: none;
+    outline-style: none;
+    width: fit-content;
+    color: white;
+    background: #03787c;
+    border-radius: 0.25rem;
+    padding: 0.3125rem 0.75rem;
+    min-width: 6rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+}

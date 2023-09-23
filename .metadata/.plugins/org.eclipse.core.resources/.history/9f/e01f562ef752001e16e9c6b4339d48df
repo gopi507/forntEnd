@@ -1,0 +1,15 @@
+package com.example.product.service;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+
+class ProductServiceTest {
+
+	@InjectMocks
+	ProductRepository productRepository
+	@Test
+	void testProductService() {
+		ProductService productService = new ProductService();
+	}
+
+}

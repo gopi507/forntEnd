@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductServiceTest" project="Product" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.product.service.ProductServiceTest" time="0.106" displayname="ProductServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]">
+    <testcase name="testgetAll" classname="com.example.product.service.ProductServiceTest" time="0.068" displayname="testgetAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetAll()]"/>
+    <testcase name="testgetByProductName" classname="com.example.product.service.ProductServiceTest" time="0.009" displayname="testgetByProductName()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetByProductName()]"/>
+    <testcase name="testgetByProductType" classname="com.example.product.service.ProductServiceTest" time="0.006" displayname="testgetByProductType()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetByProductType()]"/>
+    <testcase name="testaddProduct" classname="com.example.product.service.ProductServiceTest" time="0.004" displayname="testaddProduct()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testaddProduct()]"/>
+    <testcase name="testgetByProductPrice" classname="com.example.product.service.ProductServiceTest" time="0.006" displayname="testgetByProductPrice()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetByProductPrice()]"/>
+    <testcase name="testgetByProductId" classname="com.example.product.service.ProductServiceTest" time="0.004" displayname="testgetByProductId()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetByProductId()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,7 @@
+package com.task.Survey.repo;
+
+import com.task.Survey.model.SurveyData;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface SurveyRepo extends MongoRepository<SurveyData, String> {
+}

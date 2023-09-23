@@ -1,0 +1,23 @@
+
+ƒ	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çæ¹Ì8‰êìñ¦1Hí	RMINORZ
+CODE_SMELL
+‘
+java:S1128"^Remove this unused import 'org.springframework.aop.framework.adapter.ThrowsAdviceInterceptor'.(‘¹¤œ8˜àøü¦1Hî	RMINORZ
+CODE_SMELL
+n
+java:S16127";Replace this lambda with method reference 'priceList::add'.(à«£Ã8ŒøÏú¦1Hð	RMINORZ
+CODE_SMELL
+x
+java:S1612J"@Replace this lambda with method reference 'productsRating::add'.(ÅäÎÅÿÿÿÿÿ8¬„çï¦1Hò	RMINORZ
+CODE_SMELL
+‚
+java:S1128	"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅþÿÿÿÿHô	RMINORZ
+CODE_SMELL
+m
+java:S1126R"AReplace this if-then-else statement by a single return statement.(©¥›ôHö	RMINORZ
+CODE_SMELL
+m	java:S125:"<This block of commented-out lines of code should be removed.(ØÒê}8ŒøÏú¦1H÷	RMAJORZ
+CODE_SMELL
+|
+java:S1128"KRemove this unused import 'ch.qos.logback.core.joran.conditional.IfAction'.(èû÷ÆþÿÿÿÿHý	RMINORZ
+CODE_SMELL

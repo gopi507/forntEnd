@@ -1,0 +1,96 @@
+package com.example.product.controller;
+
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import com.example.product.model.Product;
+import com.example.product.service.ProductService;
+
+@WebMvcTest(value = ProductController.class)
+class ProductControllerTest {
+    
+    @Autowired
+    MockMvc mockMvc;
+
+    @MockBean
+    ProductService productService;
+
+    Product product = new Product(12345, "watch", "fossil watch", 20000.0, 9.7, true);
+    List<Product> list = new ArrayList<>();
+
+    @BeforeEach
+    void beforeEach() {
+        list.add(product);
+    }
+
+    @Test
+    void testGetAllList() throws Exception {
+        when(productService.getAll()).thenReturn(list);
+        mockMvc.perform(MockMvcRequestBuilders.get("/getAllList")).andExpect(jsonPath("$", notNullValue()));
+    }
+
+    @Test
+    void testGetProductById() throws Exception {
+        when(productService.getByProductId(12345)).thenReturn(product);
+        mockMvc.perform(MockMvcRequestBuilders.get("/getProductById/{id}", product.getProductId())).andExpect(status().isOk());
+    }
+
+    @Test
+    void testGetProductByType() throws Exception {
+        when(productService.getByProductType("watch")).thenReturn(list);
+        mockMvc.perform(MockMvcRequestBuilders.get("/getProductByType/{type}", product.getProductType())).andExpect(status().isOk());
+    }
+
+    @Test
+    void testGetProductByName() throws Exception {
+        when(productService.getByProductName("fossil watch")).thenReturn(list);
+        mockMvc.perform(MockMvcRequestBuilders.get("/getProductByName/{name}", product.getProductName())).andExpect(status().isOk());
+    }
+
+    @Test
+    void testGetProductByRating() throws Exception {
+        when(productService.getByProductRating(9.7)).thenReturn(list);
+        mockMvc.perform(MockMvcRequestBuilders.get("/getProductByRating/{rating}", product.getProductRating())).andExpect(status().isOk());
+    }
+
+    @Test
+    void testCheckProductAvalibility() throws Exception {
+        when(productService.getProductAvalibility("true")).thenReturn(true);
+        mockMvc.perform(MockMvcRequestBuilders.get("/checkProductAvalibility/{availability}", product.getProductAvalibility())).andExpect(status().isOk());
+    }
+
+    @Test
+    void testDeleteProduct() throws Exception {
+        int productId = 12345;
+        when(productService.getByProductId(productId)).thenReturn(null);
+        mockMvc.perform(MockMvcRequestBuilders.get("/deleteProduct/{id}", productId)).andExpect(status().isOk());
+    }
+
+    // Uncomment and implement the following test methods as needed
+    /*
+    @Test
+    void testAddProduct() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    void testUpdateProduct() {
+        fail("Not yet implemented");
+    }
+    */
+}

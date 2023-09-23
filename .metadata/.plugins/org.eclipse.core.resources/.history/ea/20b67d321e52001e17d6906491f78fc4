@@ -1,0 +1,107 @@
+package com.example.product.controller;
+
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultMatcher;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.example.product.model.Product;
+import com.example.product.repository.ProductRepository;
+import com.example.product.service.ProductService;
+import com.fasterxml.jackson.annotation.JacksonInject.Value;
+
+@WebMvcTest(value = ProductController.class)
+class ProductControllerTest {
+	
+	
+	@Autowired
+	MockMvc mockMvc;
+	
+	@MockBean
+	ProductService productService;
+	
+
+	
+	Product product = new Product(12345, "watch","fossil watch",20000.0 , null, null);
+	List<Product> list = new ArrayList<>();
+
+	@BeforeEach
+	void beforeEach() {
+		list.add(product);
+	}
+
+	@Test
+	void testGetAllList() throws Exception{
+		when(productService.getAll()).thenReturn(list);
+		mockMvc.perform(MockMvcRequestBuilders.get("/getAllList")).andExpect(jsonPath("$", notNullValue()));
+	}
+
+	@Test
+	void testGetProductById() throws Exception {
+		when(productService.getByProductId(12345)).thenReturn(product);
+		mockMvc.perform(MockMvcRequestBuilders.get("/getProductById/"+product.getProductId())).andExpect(status().isOk());
+
+	}
+
+	@Test
+	void testGetProductByType() throws Exception {
+		when(productService.getByProductType("watch")).thenReturn(list);
+		mockMvc.perform(MockMvcRequestBuilders.get("/getProductByType/"+product.getProductType())).andExpect(status().isOk());
+	}
+
+	@Test
+	void testGetProductByName() throws Exception {
+		when(productService.getByProductName("fossil watch")).thenReturn(list);
+		mockMvc.perform(MockMvcRequestBuilders.get("/getProductByName/"+product.getProductName())).andExpect(status().isOk());
+	}
+
+	@Test
+	void testGetProductByPrice() throws Exception {
+		when(productService.getByProductPrice(10000.0, 20000.0)).thenReturn(list);
+		mockMvc.perform(MockMvcRequestBuilders.get("/getProductByPrice/"+product.getProductPrice())).andExpect(status().isOk());
+	}
+//
+//	@Test
+//	void testGetProductByRating() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testCheckProductAvalibility() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testAddProduct() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testUpdateProduct() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testDeleteProduct() {
+//		fail("Not yet implemented");
+//	}
+
+}

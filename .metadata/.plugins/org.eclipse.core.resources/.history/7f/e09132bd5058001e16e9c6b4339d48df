@@ -1,0 +1,5 @@
+package com.example.dataForm.model;
+
+public class Sequence {
+
+}

@@ -1,0 +1,16 @@
+
+ˆ
+java:S1104"WMake productType a static final constant or non-public and provide accessors if needed.(Û‹óßúÿÿÿÿHÛRMINORZ
+CODE_SMELL
+
+java:S1104"^Make productAvalibility a static final constant or non-public and provide accessors if needed.(Óõ”àÿÿÿÿÿHÜRMINORZ
+CODE_SMELL
+„
+java:S1104"XMake productPrice a static final constant or non-public and provide accessors if needed.(³şÜãHŞRMINORZ
+CODE_SMELL
+Š
+java:S1104"YMake productRating a static final constant or non-public and provide accessors if needed.(“ƒ¾ÕşÿÿÿÿHÚRMINORZ
+CODE_SMELL
+ƒ
+java:S1104"WMake productName a static final constant or non-public and provide accessors if needed.(‹Ïš‡HİRMINORZ
+CODE_SMELL

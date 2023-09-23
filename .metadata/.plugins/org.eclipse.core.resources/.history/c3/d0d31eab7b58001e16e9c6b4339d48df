@@ -1,0 +1,20 @@
+package com.example.survey.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.survey.model.SurveyData;
+import com.example.survey.repo.SurveyRepo;
+@Service
+public class SurveyService {
+    @Autowired
+    SurveyRepo surveyRepo;
+
+    public SurveyData addBenchDataForm(SurveyData surveyData) {
+
+        return surveyRepo.save(surveyData);
+    }
+
+
+
+}

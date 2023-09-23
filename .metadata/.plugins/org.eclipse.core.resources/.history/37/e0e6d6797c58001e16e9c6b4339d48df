@@ -1,0 +1,26 @@
+package com.example.survey.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.survey.model.SurveyData;
+import com.example.survey.repo.SurveyRepo;
+@Service
+public class SurveyService {
+    @Autowired
+    SurveyRepo surveyRepo;
+    
+    
+    public List<SurveyData> getAll(){
+    	return surveyRepo.findAll();   
+    	}
+    public SurveyData addBenchDataForm(SurveyData surveyData) {
+
+        return surveyRepo.save(surveyData);
+    }
+
+
+
+}
