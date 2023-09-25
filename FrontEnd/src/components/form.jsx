@@ -10,7 +10,7 @@ function Form(props) {
         reportingToBase: "",
         explanation: "",
         certifications: "",
-        benchStatus: "On Bench",
+        benchStatus: "",
     });
 
     const handleChange = (e) => {
@@ -19,7 +19,7 @@ function Form(props) {
             ...formData,
             [name]: value,
         });
-
+    
         console.log(formData)
     };
 
@@ -68,7 +68,7 @@ function Form(props) {
 
                             <li>
                                 <label htmlFor='mail'>Business Email</label><br></br>
-                                <input id='name' name='businessEmail' type='email' onChange={handleChange} required></input>
+                                <input id='mail' name='businessEmail' type='email' onChange={handleChange} required></input>
                             </li>
 
                             <li>
@@ -109,17 +109,17 @@ function Form(props) {
                                 <label htmlFor='true'>What is your Current Bench Status:</label>
                                 <br></br><br></br>
                                 <span className='radio1'>
-                                    <input type="radio" id="bench" name="status" value="bench" onChange={handleChange} />
+                                    <input type="radio" id="bench" name="benchStatus" value="bench" onChange={handleChange} />
                                     <label htmlFor="bench">On Bench</label>
                                 </span>
 
                                 <span className='radio1'>
-                                    <input type="radio" id="shadow" name="status" value="shadow" onChange={handleChange} />
+                                    <input type="radio" id="shadow" name="benchStatus" value="shadow" onChange={handleChange} />
                                     <label htmlFor="shadow">On Shadow Project (On project but not billable yet)</label><br />
                                 </span>
 
                                 <span className='radio1'>
-                                    <input type="radio" id="billable" name="status" value="billable" onChange={handleChange} />
+                                    <input type="radio" id="billable" name="benchStatus" value="billable" onChange={handleChange} />
                                     <label htmlFor="billable">On Billable Project (Have confirmation Email)</label><br />
                                 </span>
                             </li>
