@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductServiceTest" project="Product" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.product.service.ProductServiceTest" time="0.083" displayname="ProductServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]">
-    <testcase name="testgetAll" classname="com.example.product.service.ProductServiceTest" time="0.055" displayname="testgetAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetAll()]"/>
-    <testcase name="testgetByProductName" classname="com.example.product.service.ProductServiceTest" time="0.01" displayname="testgetByProductName()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetByProductName()]"/>
-    <testcase name="testgetByProductType" classname="com.example.product.service.ProductServiceTest" time="0.007" displayname="testgetByProductType()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetByProductType()]"/>
-    <testcase name="testgetByProductId" classname="com.example.product.service.ProductServiceTest" time="0.005" displayname="testgetByProductId()" uniqueid="[engine:junit-jupiter]/[class:com.example.product.service.ProductServiceTest]/[method:testgetByProductId()]"/>
-  </testsuite>
-</testrun>
