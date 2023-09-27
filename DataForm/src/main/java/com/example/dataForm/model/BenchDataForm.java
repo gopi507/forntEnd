@@ -28,6 +28,13 @@ public class BenchDataForm {
 	public String explanation;
 	public String certifications;
 	public String benchStatus;
+	public  String attendingBenchCalls;
+	 public  String currentWorkDetails;
+	 public String trainingOrActivity;
+	 public String otherActivity;
+	 public  String completionDate;
+	 public String interviewPreparedness;
+	 public String isUpdatingDigiDashboard;
 	
 	
 	

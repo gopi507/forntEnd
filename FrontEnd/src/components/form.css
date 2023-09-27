@@ -53,9 +53,14 @@
 ol {
     margin-bottom: 50px;
 }
+.bold{
+    font-weight: bolder;
+    font-size: larger;
+}
 
 input[type=text],
-[type=email] {
+[type=email] ,
+[type=date]{
     width: 100%;
     border: none;
     margin-top: 20px;
@@ -121,4 +126,59 @@ button {
     line-height: 1.25rem;
     font-weight: 600;
     font-size: 0.875rem;
+}
+.p-rating {
+
+    margin: 20px !important;
+
+}
+
+ 
+
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+
+    color: #03787c !important;
+
+}
+
+ 
+
+.p-rating-item:focus {
+
+    color: #03787c !important;
+
+}
+
+ 
+
+.p-rating:hover .p-rating-item:hover .p-rating-item-active:hover .p-rating-icon:hover {
+
+    color: #03787c !important;
+
+}
+
+ 
+
+.p-rating .p-rating-item:focus {
+
+    box-shadow: none !important;
+
+    color: #03787c !important;
+
+}
+
+ 
+
+.p-rating:not(.p-disabled):not(.p-readonly) .p-rating-item:hover .p-rating-icon {
+
+    color: none !important;
+
+}
+
+ 
+
+.p-rating:hover .p-rating-item:hover .p-rating-icon:hover {
+
+    color: none !important;
+
 }
